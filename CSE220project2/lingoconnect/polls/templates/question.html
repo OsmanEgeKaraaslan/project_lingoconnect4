@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lingoconnect - Quiz</title>
+</head>
+<body>
+    <h1>Language Quiz</h1>
+    <form method="post" action="{% url 'polls:question' %}">
+        {% csrf_token %}
+        <ul>
+            {% for question in questions %}
+                <li>
+                    <p>{{ question.text_english }}</p>
+                    <ul>
+                        {% for choice in question.choice_set.all %}
+                            <li>
+                                <input type="radio" id="{{ choice.id }}" name="{{ question.id }}" value="{{ choice.id }}">
+                                <label for="{{ choice.id }}">{{ choice.text_english }}</label>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+

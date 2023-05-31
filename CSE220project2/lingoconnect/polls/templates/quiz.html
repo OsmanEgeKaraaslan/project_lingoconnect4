@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+<body>
+<h1>Quiz</h1>
+<div class="question" id="q1">
+  <h2>Question 1:</h2>
+  <p>The traffic was moving very slowly because the highway _____ repaired.</p>
+  <div class="options">
+    <label><input type="radio" name="q1" value="would be"> would be</label>
+    <label><input type="radio" name="q1" value="had been"> had been</label>
+    <label><input type="radio" name="q1" value="was being" data-correct="true"> was being</label>
+    <label><input type="radio" name="q1" value="should have been"> should have been</label>
+    <label><input type="radio" name="q1" value="must be"> must be</label>
+  </div>
+</div>
+
+<div class="question" id="q2">
+  <h2>Question 2:</h2>
+  <p>She looked _____ to me. She looked at me _____.</p>
+  <div class="options">
+    <label><input type="radio" name="q2" value="unhappily/hungry"> unhappily/hungry</label>
+    <label><input type="radio" name="q2" value="hungry/unhappy"> hungry/unhappy</label>
+    <label><input type="radio" name="q2" value="silly/silly"> silly/silly</label>
+    <label><input type="radio" name="q2" value="happy/happy"> happy/happy</label>
+    <label><input type="radio" name="q2" value="angry/angrily" data-correct="true"> angry/angrily</label>
+  </div>
+</div>
+
+<div class="question" id="q3">
+  <h2>Question 3:</h2>
+  <p> I haven't seen you for ages. Where have you _____?
+  </p>
+  <div class="options">
+    <label><input type="radio" name="q3" value="escaping from me"> escaping from me</label>
+    <label><input type="radio" name="q3" value="hiding yourself"> hiding yourself</label>
+    <label><input type="radio" name="q3" value="must have been"> must have been</label>
+    <label><input type="radio" name="q3" value="been" data-correct="true"> been</label>
+    <label><input type="radio" name="q3" value="gone"> gone</label>
+  </div>
+</div>
+
+<div class="question" id="q4">
+  <h2>Question 4:</h2>
+  <p> Once the children have grown up I shall start travelling again, and I'm really ____ that.
+
+  </p>
+  <div class="options">
+    <label><input type="radio" name="q4" value="passing on to"> passing on to</label>
+    <label><input type="radio" name="q4" value="waiting up for"> waiting up for</label>
+    <label><input type="radio" name="q4" value="looking forward to" data-correct="true"> looking forward to </label>
+    <label><input type="radio" name="q4" value="making up for"> making up for</label>
+    <label><input type="radio" name="q4" value="going along with"> going along with</label>
+  </div>
+</div>
+
+<div class="question" id="q5">
+<h2>Question 5:</h2>
+<p>The 1990s have seen a general ____ in aid to poor countries, largely because of fiscal pressures in many rich
+  countries.
+</p>
+<div class="options">
+  <label><input type="radio" name="q5" value="consumption"> consumption</label>
+  <label><input type="radio" name="q5" value="decline" data-correct="true"> decline</label>
+  <label><input type="radio" name="q5" value="contingency"> contingency </label>
+  <label><input type="radio" name="q5" value="conviction"> conviction</label>
+  <label><input type="radio" name="q5" value="expenditure"> expenditure</label>
+</div>
+</div>
+
+<button onclick="submitQuiz()">Submit</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="quiz.js"></script>
+  <script>
+    function submitQuiz() {
+      // Retrieve user answers
+      const q1Answer = document.querySelector('input[name="q1"]:checked').value;
+      const q2Answer = document.querySelector('input[name="q2"]:checked').value;
+
+      // Do something with the answers (e.g., validate, process, or display results)
+      console.log("Question 1 Answer: " + q1Answer);
+      console.log("Question 2 Answer: " + q2Answer);
+    }
+  </script>
+</body>
+</html>

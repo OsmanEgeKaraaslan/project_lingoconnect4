@@ -1,0 +1,47 @@
+/* quiz.css */
+
+/* Styling for the quiz container */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the Submit button */
+button {
+  display: block;
+  margin: 20px auto;
+}
+
+/* Styling for the correct answer */
+.correct {
+  background-color: lightgreen;
+}
+
+/* Styling for the wrong answer */
+.wrong {
+  background-color: salmon;
+}

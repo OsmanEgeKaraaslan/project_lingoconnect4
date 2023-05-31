@@ -1,0 +1,17 @@
+<h1>Quiz Result</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Choice</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user_answer in user_answers %}
+    <tr>
+      <td>{{ user_answer.question.question_text }}</td>
+      <td>{{ user_answer.choice.choice_text }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

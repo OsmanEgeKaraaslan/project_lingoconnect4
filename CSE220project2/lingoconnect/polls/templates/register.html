@@ -1,0 +1,21 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}
+Your App - Register
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<div class="register-form">
+    <img src="{% static 'image/logo.png' %}" alt="LingoConnect Logo">
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+</div>
+{% endblock %}
+
+
